@@ -1,3 +1,4 @@
+
 /* styles.css (COMPLETO) */
 *{ margin:0; padding:0; box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
@@ -11,46 +12,48 @@ body{
 
 /* ---------------- HERO ---------------- */
 .hero{
-    height:100vh;
-    position: relative;
-    background-image: url("Assets/MicaelaMongellinegro.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    image-rendering: auto;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
+  height:100vh;
+  position: relative;
+  background-image: url("Assets/MicaelaMongelliboliche.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: auto;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
 
-  /* HERO - mobile */
+/* HERO - mobile */
 @media (max-width: 768px){
-    .hero{
-      background-image: url("assets/MicaelaMongellicelular.png");
-      background-position: center top; /* mejor encuadre en vertical */
-    }
+  .hero{
+    background-image: url("assets/MicaelaMongellicelular.png");
+    background-position: center top; /* mejor encuadre en vertical */
   }
-  
-  .overlay{
-    height:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    color:#fff;
-    text-align:center;
-    background: rgba(0,0,0,0.35); /* oscurece la foto */
-    position:relative;
-    padding: 0 18px;
-  }
-  
+}
+
+.overlay{
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
+  text-align:center;
+  background: rgba(0,0,0,0.35); /* oscurece la foto */
+  position:relative;
+  padding: 0 18px;
+}
+
 .overlay h1{
   font-family:'Cormorant Garamond', serif;
   font-size:3.4rem;
   letter-spacing:4px;
   line-height:1.05;
 }
+
 .xv{
-  color:#d4af37;
+  /* Antes dorado -> ahora plateado */
+  color:#C9CDD3; /* plateado */
   margin-top:12px;
   letter-spacing:3px;
   text-transform:uppercase;
@@ -73,7 +76,7 @@ body{
   left:50%;
   width:2px;
   height:18px;
-  background:#d4af37;
+  background:#C9CDD3; /* plateado */
   transform:translateX(-50%);
   animation: arrow 2s infinite;
   opacity:.9;
@@ -85,8 +88,8 @@ body{
   left:50%;
   width:8px;
   height:8px;
-  border-right:2px solid #d4af37;
-  border-bottom:2px solid #d4af37;
+  border-right:2px solid #C9CDD3; /* plateado */
+  border-bottom:2px solid #C9CDD3; /* plateado */
   transform:translateX(-50%) rotate(45deg);
 }
 @keyframes arrow{
@@ -97,34 +100,36 @@ body{
 
 /* ---------------- INVITE COUNT ---------------- */
 .invite-count{
-    padding:120px 20px;
-    position: relative;
-    color:#eee;
-  
-    background: linear-gradient(
-      180deg,
-      #000000 0%,
-      #1f1f1f 25%,
-      #2f2f2f 50%,
-      #242424 70%,
-      #181818 85%,
-      #141414 100%
-    );
-  }
-  
-  
+  padding:120px 20px;
+  position: relative;
+  color:#eee;
+
+  /* Negro + grises */
+  background: linear-gradient(
+    180deg,
+    #000000 0%,
+    #1b1b1b 25%,
+    #2b2b2b 50%,
+    #222222 70%,
+    #181818 85%,
+    #111111 100%
+  );
+}
+
 .invite-inner{
   max-width:900px;
   margin:auto;
   text-align:center;
 }
+
+/* Antes gold-line -> ahora silver-line (mismo nombre para no romper HTML) */
 .gold-line{
   display:block;
   width:80px;
   height:1px;
   margin:0 auto 28px;
-  background: linear-gradient(90deg, transparent, #d4af37, transparent);
-  box-shadow: 0 0 18px rgba(212,175,55,0.20);
+  background: linear-gradient(90deg, transparent, #C9CDD3, transparent);
+  box-shadow: 0 0 18px rgba(201,205,211,0.18);
 }
 .gold-line.small{
   width:64px;
@@ -166,7 +171,7 @@ body{
   transform:translateX(-50%);
   width:320px;
   height:1px;
-  background: linear-gradient(90deg, transparent, rgba(212,175,55,0.35), transparent);
+  background: linear-gradient(90deg, transparent, rgba(201,205,211,0.30), transparent);
 }
 .count-title{
   font-family:'Cormorant Garamond', serif;
@@ -185,7 +190,7 @@ body{
 }
 .time-card{
   background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.03));
-  border:1px solid rgba(212,175,55,0.25);
+  border:1px solid rgba(201,205,211,0.22); /* plateado */
   border-radius:18px;
   padding:18px 10px;
   box-shadow:0 20px 45px rgba(0,0,0,0.4);
@@ -195,7 +200,7 @@ body{
 }
 .time-card:hover{
   transform: translateY(-3px);
-  border-color: rgba(212,175,55,0.40);
+  border-color: rgba(201,205,211,0.35);
   box-shadow:0 26px 60px rgba(0,0,0,0.48);
 }
 .time-card span{
@@ -215,44 +220,43 @@ body{
 
 /* ---------------- DETAILS (DEGRADADO DE COLORES, ELEGANTE) ---------------- */
 .details{
-    padding:120px 20px;
-    position: relative;
-    overflow: hidden;
-    color:#eee;
-  
-    /* base del bloque (arranca EXACTO igual que terminó invite-count) */
-    background:
-      radial-gradient(900px 420px at 25% 20%, rgba(212,175,55,0.10), transparent 60%),
-      radial-gradient(800px 420px at 80% 30%, rgba(120,84,255,0.12), transparent 60%),
-      radial-gradient(1000px 520px at 50% 90%, rgba(28,121,255,0.10), transparent 65%),
-      linear-gradient(180deg, #141414 0%, #181818 20%, #0f1422 50%, #120e1b 70%, #070707 100%);
-  }
-  
-  /* ESTE ES EL FIX: difumina el borde superior y elimina la franja */
-  .details::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:120px;
-    background: linear-gradient(
-      180deg,
-      rgba(20,20,20,1) 0%,
-      rgba(20,20,20,0.85) 35%,
-      rgba(20,20,20,0.45) 70%,
-      rgba(20,20,20,0) 100%
-    );
-    pointer-events:none;
-    z-index:1;
-  }
-  
-  /* aseguramos que el contenido quede arriba del fade */
-  .details .details-inner{
-    position:relative;
-    z-index:2;
-  }
-  
+  padding:120px 20px;
+  position: relative;
+  overflow: hidden;
+  color:#eee;
+
+  /* Plateado / grises (sin violeta/azul) */
+  background:
+    radial-gradient(900px 420px at 25% 20%, rgba(201,205,211,0.10), transparent 60%),
+    radial-gradient(800px 420px at 80% 30%, rgba(255,255,255,0.06), transparent 60%),
+    radial-gradient(1000px 520px at 50% 90%, rgba(140,140,140,0.10), transparent 65%),
+    linear-gradient(180deg, #111111 0%, #171717 20%, #1f1f1f 50%, #121212 70%, #070707 100%);
+}
+
+/* difumina el borde superior y elimina la franja */
+.details::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:120px;
+  background: linear-gradient(
+    180deg,
+    rgba(17,17,17,1) 0%,
+    rgba(17,17,17,0.85) 35%,
+    rgba(17,17,17,0.45) 70%,
+    rgba(17,17,17,0) 100%
+  );
+  pointer-events:none;
+  z-index:1;
+}
+
+/* aseguramos que el contenido quede arriba del fade */
+.details .details-inner{
+  position:relative;
+  z-index:2;
+}
 
 /* viñeta */
 .details::after{
@@ -289,7 +293,7 @@ body{
   border-radius: 22px;
   padding: 34px 22px;
   background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
-  border: 1px solid rgba(212,175,55,0.18);
+  border: 1px solid rgba(201,205,211,0.18); /* plateado */
   box-shadow: 0 22px 55px rgba(0,0,0,0.45);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -298,7 +302,7 @@ body{
 
 .card:hover{
   transform: translateY(-3px);
-  border-color: rgba(212,175,55,0.30);
+  border-color: rgba(201,205,211,0.30);
   box-shadow: 0 28px 70px rgba(0,0,0,0.55);
 }
 
@@ -328,23 +332,26 @@ body{
   margin-top:18px;
   padding:12px 30px;
   border-radius:999px;
-  background:linear-gradient(180deg,#e0e0e0,#bfbfbf);
+
+  /* plateado / gris */
+  background:linear-gradient(180deg,#F2F2F2,#CFCFCF);
   color:#111;
   text-decoration:none;
   font-weight:500;
   letter-spacing: 0.8px;
-  border: 1px solid rgba(0,0,0,0.10);
+  border: 1px solid rgba(0,0,0,0.15);
   box-shadow: 0 12px 30px rgba(0,0,0,0.18);
-  transition: transform .2s ease, box-shadow .2s ease;
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
 }
 .btn:hover{
   transform: translateY(-1px);
   box-shadow: 0 18px 45px rgba(0,0,0,0.22);
+  filter: brightness(1.03);
 }
 .btn-dark{
   background:linear-gradient(180deg,#1a1a1a,#000);
   color:#fff;
-  border:1px solid rgba(212,175,55,0.30);
+  border:1px solid rgba(201,205,211,0.30); /* plateado */
 }
 
 /* ---------------- FOOTER ---------------- */
@@ -388,3 +395,91 @@ footer{
 }
 
 
+/* =========================
+   CARD "DRESS CODE" MEJORADA
+   ========================= */
+
+/* Asegura que los pseudo-elementos no alteren el tamaño */
+.card--dress{
+  position: relative;
+  overflow: hidden;
+  isolation: isolate; /* para que las capas se comporten bien */
+}
+
+/* “Shimmer” diagonal suave (animado) */
+.card--dress::before{
+  content:"";
+  position:absolute;
+  inset:-40%;
+  background: linear-gradient(
+    120deg,
+    transparent 40%,
+    rgba(201,205,211,0.18) 50%,
+    transparent 60%
+  );
+  transform: translateX(-30%) rotate(10deg);
+  animation: dressShimmer 4.2s ease-in-out infinite;
+  pointer-events:none;
+  z-index:0;
+  opacity:0.9;
+}
+
+/* Glow/borde vivo que aparece sutil al hover */
+.card--dress::after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius: 24px;
+  background: radial-gradient(700px 260px at 50% 0%, rgba(201,205,211,0.28), transparent 55%);
+  opacity:0;
+  transition: opacity .25s ease;
+  pointer-events:none;
+  z-index:0;
+}
+
+.card--dress:hover::after{
+  opacity:1;
+}
+
+/* Badge minimalista (estrella) */
+.card--dress .card-badge{
+  position:absolute;
+  top:18px;
+  right:18px;
+  width:34px;
+  height:34px;
+  border-radius:999px;
+  display:grid;
+  place-items:center;
+  font-size:14px;
+  color:#111;
+  background: linear-gradient(180deg,#F2F2F2,#CFCFCF);
+  border: 1px solid rgba(0,0,0,0.16);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.22);
+  z-index:2;
+  opacity:0.92;
+  transform: translateZ(0);
+}
+
+/* Eleva un poco más que el resto y hace “tilt” leve */
+.card--dress{
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease, filter .25s ease;
+}
+.card--dress:hover{
+  transform: translateY(-4px) rotateX(2deg);
+  border-color: rgba(201,205,211,0.35);
+  box-shadow: 0 30px 78px rgba(0,0,0,0.58);
+  filter: brightness(1.02);
+}
+
+/* Mantiene el contenido por encima de las capas */
+.card--dress > *{
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes dressShimmer{
+  0%   { transform: translateX(-35%) rotate(10deg); opacity:0.55; }
+  50%  { transform: translateX(10%)  rotate(10deg); opacity:0.95; }
+  100% { transform: translateX(35%)  rotate(10deg); opacity:0.55; }
+}
